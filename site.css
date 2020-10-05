@@ -1,8 +1,35 @@
 :root {
 	--header-gap: .5em;
+	--menu-gap: .8em;
 	--body-bg-color: #1E2E3D;
 	--section-bg-color: #243D54;
-	--header-color: #94a1ade6;
+	--menu-color: #94a1ade6;
+	--header-color: #cecede;
+	box-sizing: border-box;
+	letter-spacing: .05em;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+a:link {
+	color: var(--menu-color);
+}
+
+a:visited {
+	color: #778;
+}
+
+a:focus, a:hover {
+	color: var(--header-color);
+	cursor: pointer;
+}
+
+a:active {
+	color: #b81414;
 }
 
 body {
@@ -24,7 +51,6 @@ body {
 }
 
 .header-reg > li > a {
-	color: var(--header-color);
 	font-size: .9em;
 	text-decoration: none;
 }
@@ -36,4 +62,98 @@ h1 {
 	border-bottom-style: solid;
 	border-color: #b0050b;
 	
+}
+
+.menu {
+	font-size: 1.2em;
+	font-weight: 600;
+	position: relative;
+	margin: 0 var(--menu-gap);
+}
+
+.menu-toggle {
+	position: absolute;
+	top: -1.05em;
+	right: .4em;
+	border: 0;
+	
+	color: var(--menu-color);
+	background-color: transparent;
+	font-size: 3em;
+	width: 1em;
+	height: 1em;
+	line-height: .4em;
+	text-indent: 5em;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.menu-toggle::after {
+	position: absolute;
+	top: .2em;
+	left: .2em;
+	display: block;
+	content: "\2261";
+	text-indent: 0;
+}
+
+.menu-dropdown {
+	display: none;
+	position: absolute;
+	right: 30em;
+	left: 0;
+	margin: 0;
+}
+
+.menu.is-open .menu-dropdown {
+	display: block;
+}
+
+.nav-menu {
+	margin: 0;
+	padding-left: 0;
+	list-style: none;
+	background-color: var(--section-bg-color);
+}
+
+.nav-menu > li > a {
+	display: block;
+	padding: .8em 1em;
+	text-decoration: none;
+	border-width: 1px;
+	border-bottom-style: solid;
+}
+
+.a-hover:hover {
+	   background-color: #b0050b;
+}
+
+
+@media (min-width: 600px) {
+    .menu-toggle {
+        display: none;
+    }
+    
+    .menu-dropdown {
+        display: block;
+        position: static;
+    }
+}
+
+@media (min-width: 600px) {
+    .nav-menu {
+        display: flex;
+        border: 0;
+        padding: 0 1em;
+    }
+    
+    .nav-menu > li {
+        flex: ;
+    }
+    
+    .nav-menu > li > a {
+        padding: .9em;
+        text-align: center;
+		border-bottom-style: none;
+    }
 }
