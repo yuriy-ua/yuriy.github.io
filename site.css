@@ -1,0 +1,39 @@
+:root {
+	--header-gap: .5em;
+	--body-bg-color: #1E2E3D;
+	--section-bg-color: #243D54;
+	--header-color: #94a1ade6;
+}
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	margin: 0;
+	background-color: var(--body-bg-color);
+}
+
+.header-reg {
+	display: flex;
+	margin: 0;
+	padding: .7em 2em ;
+	list-style-type: none;
+	background-color: var(--section-bg-color);
+}
+
+.header-reg-right  {
+	margin-left: auto;
+}
+
+.header-reg > li > a {
+	color: var(--header-color);
+	font-size: .9em;
+	text-decoration: none;
+}
+
+h1 {
+	margin: 0 var(--header-gap);
+	padding: .5em 1em;
+	color: #cecede;
+	border-bottom-style: solid;
+	border-color: #b0050b;
+	
+}
