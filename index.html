@@ -15,6 +15,27 @@
 			</ul>
 			<h1>К155ЛА3</h1>
 		</header>
+		<nav class="menu" id="main-menu">
+			<button class="menu-toggle" id="toggle-menu">Свернуть меню</button>
+			<div class="menu-dropdown">
+				<ul class="nav-menu">
+					<li><a class="a-hover" href="forum">Форум</a></li>
+					<li><a class="a-hover" href="blog">Блог</a></li>
+					<li><a class="a-hover" href="article">Статьи</a></li>
+					<li><a class="a-hover" href="about">О сайте</a></li>
+				</ul>
+			</div>
+		</nav>
 		
+		<script type="text/javascript">
+			(function(){
+                var button=document.getElementById('toggle-menu');
+                button.addEventListener('click', function(event){
+                    event.preventDefault();
+                    var menu=document.getElementById('main-menu');
+                    menu.classList.toggle('is-open');
+                    });
+                })();
+        </script>
 	</body>
 </html>
