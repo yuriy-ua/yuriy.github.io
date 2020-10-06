@@ -73,8 +73,8 @@ h1 {
 
 .menu-toggle {
 	position: absolute;
-	top: -1.05em;
-	right: .4em;
+	top: -1.1em;
+	right: .1em;
 	border: 0;
 	
 	color: var(--menu-color);
@@ -100,7 +100,7 @@ h1 {
 .menu-dropdown {
 	display: none;
 	position: absolute;
-	right: 30em;
+	right: 5em;
 	left: 0;
 	margin: 0;
 }
